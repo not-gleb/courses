@@ -20,5 +20,15 @@ namespace PL
             //dataGridView1.DataSource = ctx.Courses.ToList();
         }
 
+        private void buttonLogIn_Click(object sender, EventArgs e)
+        {
+            using (var ctx = new CoursesContext())
+            {
+                if (ctx.Users.Any(x => x.Username.ToUpper() == textBoxUsername.Text.ToUpper() && x.Password == textBoxPassword.Text))
+                    MessageBox.Show("Logged in");
+                else
+                    MessageBox.Show($"Wrong password {textBoxUsername}");
+            }
+        }
     }
 }
