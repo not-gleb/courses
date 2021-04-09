@@ -34,34 +34,50 @@ namespace PL
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelLogIn = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.panelRegister = new System.Windows.Forms.Panel();
+            this.buttonBack2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxRegPWConfirm = new System.Windows.Forms.TextBox();
+            this.textBoxRegPW = new System.Windows.Forms.TextBox();
+            this.textBoxRegUsername = new System.Windows.Forms.TextBox();
+            this.buttonRegisterUser = new System.Windows.Forms.Button();
+            this.buttonWelcomeMenuLogIn = new System.Windows.Forms.Button();
+            this.buttonWelcomeMenuRegister = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelLogIn.SuspendLayout();
+            this.panelRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.Location = new System.Drawing.Point(315, 135);
+            this.textBoxUsername.Location = new System.Drawing.Point(357, 156);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(297, 35);
+            this.textBoxUsername.Size = new System.Drawing.Size(327, 35);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.Location = new System.Drawing.Point(315, 202);
+            this.textBoxPassword.Location = new System.Drawing.Point(357, 220);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '●';
-            this.textBoxPassword.Size = new System.Drawing.Size(297, 35);
+            this.textBoxPassword.Size = new System.Drawing.Size(327, 35);
             this.textBoxPassword.TabIndex = 1;
             // 
             // buttonLogIn
             // 
             this.buttonLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLogIn.Location = new System.Drawing.Point(315, 298);
+            this.buttonLogIn.Location = new System.Drawing.Point(240, 291);
             this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(297, 40);
+            this.buttonLogIn.Size = new System.Drawing.Size(469, 70);
             this.buttonLogIn.TabIndex = 2;
             this.buttonLogIn.Text = "Log In";
             this.buttonLogIn.UseVisualStyleBackColor = true;
@@ -70,7 +86,7 @@ namespace PL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 135);
+            this.label1.Location = new System.Drawing.Point(247, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 30);
             this.label1.TabIndex = 3;
@@ -79,24 +95,170 @@ namespace PL
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 202);
+            this.label2.Location = new System.Drawing.Point(247, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password:";
+            // 
+            // panelLogIn
+            // 
+            this.panelLogIn.Controls.Add(this.buttonBack);
+            this.panelLogIn.Controls.Add(this.label1);
+            this.panelLogIn.Controls.Add(this.label2);
+            this.panelLogIn.Controls.Add(this.textBoxUsername);
+            this.panelLogIn.Controls.Add(this.textBoxPassword);
+            this.panelLogIn.Controls.Add(this.buttonLogIn);
+            this.panelLogIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLogIn.Location = new System.Drawing.Point(0, 0);
+            this.panelLogIn.Name = "panelLogIn";
+            this.panelLogIn.Size = new System.Drawing.Size(952, 527);
+            this.panelLogIn.TabIndex = 20;
+            this.panelLogIn.Visible = false;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(12, 23);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(57, 60);
+            this.buttonBack.TabIndex = 5;
+            this.buttonBack.Text = "<--";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // panelRegister
+            // 
+            this.panelRegister.Controls.Add(this.buttonBack2);
+            this.panelRegister.Controls.Add(this.label6);
+            this.panelRegister.Controls.Add(this.label5);
+            this.panelRegister.Controls.Add(this.label4);
+            this.panelRegister.Controls.Add(this.textBoxRegPWConfirm);
+            this.panelRegister.Controls.Add(this.textBoxRegPW);
+            this.panelRegister.Controls.Add(this.textBoxRegUsername);
+            this.panelRegister.Controls.Add(this.buttonRegisterUser);
+            this.panelRegister.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRegister.Location = new System.Drawing.Point(0, 0);
+            this.panelRegister.Name = "panelRegister";
+            this.panelRegister.Size = new System.Drawing.Size(952, 527);
+            this.panelRegister.TabIndex = 20;
+            this.panelRegister.Visible = false;
+            // 
+            // buttonBack2
+            // 
+            this.buttonBack2.Location = new System.Drawing.Point(21, 23);
+            this.buttonBack2.Name = "buttonBack2";
+            this.buttonBack2.Size = new System.Drawing.Size(72, 60);
+            this.buttonBack2.TabIndex = 7;
+            this.buttonBack2.Text = "<--";
+            this.buttonBack2.UseVisualStyleBackColor = true;
+            this.buttonBack2.Click += new System.EventHandler(this.buttonBack2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(187, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 30);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Confirm password:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(187, 159);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Password:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(187, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 30);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Username:";
+            // 
+            // textBoxRegPWConfirm
+            // 
+            this.textBoxRegPWConfirm.Location = new System.Drawing.Point(374, 225);
+            this.textBoxRegPWConfirm.Name = "textBoxRegPWConfirm";
+            this.textBoxRegPWConfirm.PasswordChar = '●';
+            this.textBoxRegPWConfirm.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegPWConfirm.TabIndex = 3;
+            // 
+            // textBoxRegPW
+            // 
+            this.textBoxRegPW.Location = new System.Drawing.Point(374, 156);
+            this.textBoxRegPW.Name = "textBoxRegPW";
+            this.textBoxRegPW.PasswordChar = '●';
+            this.textBoxRegPW.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegPW.TabIndex = 2;
+            // 
+            // textBoxRegUsername
+            // 
+            this.textBoxRegUsername.Location = new System.Drawing.Point(374, 89);
+            this.textBoxRegUsername.Name = "textBoxRegUsername";
+            this.textBoxRegUsername.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegUsername.TabIndex = 1;
+            // 
+            // buttonRegisterUser
+            // 
+            this.buttonRegisterUser.Location = new System.Drawing.Point(187, 291);
+            this.buttonRegisterUser.Name = "buttonRegisterUser";
+            this.buttonRegisterUser.Size = new System.Drawing.Size(522, 70);
+            this.buttonRegisterUser.TabIndex = 0;
+            this.buttonRegisterUser.Text = "Register";
+            this.buttonRegisterUser.UseVisualStyleBackColor = true;
+            this.buttonRegisterUser.Click += new System.EventHandler(this.buttonRegisterUser_Click);
+            // 
+            // buttonWelcomeMenuLogIn
+            // 
+            this.buttonWelcomeMenuLogIn.Location = new System.Drawing.Point(283, 135);
+            this.buttonWelcomeMenuLogIn.Name = "buttonWelcomeMenuLogIn";
+            this.buttonWelcomeMenuLogIn.Size = new System.Drawing.Size(364, 79);
+            this.buttonWelcomeMenuLogIn.TabIndex = 0;
+            this.buttonWelcomeMenuLogIn.Text = "Log in";
+            this.buttonWelcomeMenuLogIn.UseVisualStyleBackColor = true;
+            this.buttonWelcomeMenuLogIn.Click += new System.EventHandler(this.buttonWelcomeMenuLogIn_Click);
+            // 
+            // buttonWelcomeMenuRegister
+            // 
+            this.buttonWelcomeMenuRegister.Location = new System.Drawing.Point(283, 291);
+            this.buttonWelcomeMenuRegister.Name = "buttonWelcomeMenuRegister";
+            this.buttonWelcomeMenuRegister.Size = new System.Drawing.Size(364, 83);
+            this.buttonWelcomeMenuRegister.TabIndex = 0;
+            this.buttonWelcomeMenuRegister.Text = "Register";
+            this.buttonWelcomeMenuRegister.UseVisualStyleBackColor = true;
+            this.buttonWelcomeMenuRegister.Click += new System.EventHandler(this.buttonWelcomeMenuRegister_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(333, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(277, 74);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Welcome!";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 527);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonLogIn);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.panelRegister);
+            this.Controls.Add(this.panelLogIn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonWelcomeMenuRegister);
+            this.Controls.Add(this.buttonWelcomeMenuLogIn);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panelLogIn.ResumeLayout(false);
+            this.panelLogIn.PerformLayout();
+            this.panelRegister.ResumeLayout(false);
+            this.panelRegister.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +271,20 @@ namespace PL
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelLogIn;
+        private System.Windows.Forms.Button buttonWelcomeMenuLogIn;
+        private System.Windows.Forms.Button buttonWelcomeMenuRegister;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Panel panelRegister;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxRegPWConfirm;
+        private System.Windows.Forms.TextBox textBoxRegPW;
+        private System.Windows.Forms.TextBox textBoxRegUsername;
+        private System.Windows.Forms.Button buttonRegisterUser;
+        private System.Windows.Forms.Button buttonBack2;
     }
 }
 
