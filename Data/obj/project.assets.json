@@ -5791,28 +5791,25 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tgvyh\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Данил\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\Данил\\Desktop\\courses\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\tgvyh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\obj\\",
+      "projectPath": "C:\\Users\\Данил\\Desktop\\courses\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Данил\\Desktop\\courses\\Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\tgvyh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Данил\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5838,6 +5835,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.5, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.5, )"
@@ -5864,7 +5865,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.21077.7\\RuntimeIdentifierGraph.json"
       }
     }
   }

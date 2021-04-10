@@ -170,3 +170,4 @@ C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.dll
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\ref\PL.dll
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.pdb
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.genruntimeconfig.cache
+C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.FormDB.resources
