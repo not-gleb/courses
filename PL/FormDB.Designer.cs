@@ -57,6 +57,14 @@ namespace PL
             this.buttonAddCourse = new System.Windows.Forms.Button();
             this.buttonDeleteCourse = new System.Windows.Forms.Button();
             this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
+            this.otherPage = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.subjectTB = new System.Windows.Forms.TextBox();
+            this.msgTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonSendFeedback = new System.Windows.Forms.Button();
             this.Organisations.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganisation)).BeginInit();
@@ -64,6 +72,8 @@ namespace PL
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLecturers)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
+            this.otherPage.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Organisations
@@ -71,11 +81,13 @@ namespace PL
             this.Organisations.Controls.Add(this.tabPage1);
             this.Organisations.Controls.Add(this.tabPage2);
             this.Organisations.Controls.Add(this.tabPage3);
+            this.Organisations.Controls.Add(this.otherPage);
             this.Organisations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Organisations.Location = new System.Drawing.Point(0, 0);
+            this.Organisations.Margin = new System.Windows.Forms.Padding(2);
             this.Organisations.Name = "Organisations";
             this.Organisations.SelectedIndex = 0;
-            this.Organisations.Size = new System.Drawing.Size(1419, 845);
+            this.Organisations.Size = new System.Drawing.Size(946, 535);
             this.Organisations.TabIndex = 0;
             // 
             // tabPage1
@@ -88,19 +100,21 @@ namespace PL
             this.tabPage1.Controls.Add(this.buttonAddOrg);
             this.tabPage1.Controls.Add(this.buttonDeleteOrg);
             this.tabPage1.Controls.Add(this.dataGridViewOrganisation);
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1411, 802);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(938, 503);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Organisations";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // buttonExportExcelOrg
             // 
-            this.buttonExportExcelOrg.Location = new System.Drawing.Point(24, 660);
+            this.buttonExportExcelOrg.Location = new System.Drawing.Point(16, 418);
+            this.buttonExportExcelOrg.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportExcelOrg.Name = "buttonExportExcelOrg";
-            this.buttonExportExcelOrg.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportExcelOrg.Size = new System.Drawing.Size(163, 70);
             this.buttonExportExcelOrg.TabIndex = 7;
             this.buttonExportExcelOrg.Text = "Export to excel document";
             this.buttonExportExcelOrg.UseVisualStyleBackColor = true;
@@ -108,9 +122,10 @@ namespace PL
             // 
             // buttonExportWordOrg
             // 
-            this.buttonExportWordOrg.Location = new System.Drawing.Point(24, 496);
+            this.buttonExportWordOrg.Location = new System.Drawing.Point(16, 314);
+            this.buttonExportWordOrg.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportWordOrg.Name = "buttonExportWordOrg";
-            this.buttonExportWordOrg.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportWordOrg.Size = new System.Drawing.Size(163, 70);
             this.buttonExportWordOrg.TabIndex = 6;
             this.buttonExportWordOrg.Text = "Export to word document";
             this.buttonExportWordOrg.UseVisualStyleBackColor = true;
@@ -119,9 +134,10 @@ namespace PL
             // 
             this.checkBoxOrderOrg.AutoSize = true;
             this.checkBoxOrderOrg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxOrderOrg.Location = new System.Drawing.Point(24, 427);
+            this.checkBoxOrderOrg.Location = new System.Drawing.Point(16, 270);
+            this.checkBoxOrderOrg.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxOrderOrg.Name = "checkBoxOrderOrg";
-            this.checkBoxOrderOrg.Size = new System.Drawing.Size(92, 34);
+            this.checkBoxOrderOrg.Size = new System.Drawing.Size(66, 24);
             this.checkBoxOrderOrg.TabIndex = 5;
             this.checkBoxOrderOrg.Text = "Order";
             this.checkBoxOrderOrg.UseVisualStyleBackColor = true;
@@ -129,26 +145,27 @@ namespace PL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 374);
+            this.label1.Location = new System.Drawing.Point(16, 237);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 30);
+            this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Filter";
             // 
             // textBoxFilterOrgName
             // 
-            this.textBoxFilterOrgName.Location = new System.Drawing.Point(83, 371);
+            this.textBoxFilterOrgName.Location = new System.Drawing.Point(55, 235);
+            this.textBoxFilterOrgName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFilterOrgName.Name = "textBoxFilterOrgName";
-            this.textBoxFilterOrgName.Size = new System.Drawing.Size(186, 35);
+            this.textBoxFilterOrgName.Size = new System.Drawing.Size(125, 26);
             this.textBoxFilterOrgName.TabIndex = 3;
             this.textBoxFilterOrgName.TextChanged += new System.EventHandler(this.textBoxFilterOrgName_TextChanged);
             // 
             // buttonAddOrg
             // 
-            this.buttonAddOrg.Location = new System.Drawing.Point(24, 43);
-            this.buttonAddOrg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAddOrg.Location = new System.Drawing.Point(16, 27);
             this.buttonAddOrg.Name = "buttonAddOrg";
-            this.buttonAddOrg.Size = new System.Drawing.Size(245, 110);
+            this.buttonAddOrg.Size = new System.Drawing.Size(163, 70);
             this.buttonAddOrg.TabIndex = 2;
             this.buttonAddOrg.Text = "Add";
             this.buttonAddOrg.UseVisualStyleBackColor = true;
@@ -156,10 +173,9 @@ namespace PL
             // 
             // buttonDeleteOrg
             // 
-            this.buttonDeleteOrg.Location = new System.Drawing.Point(24, 205);
-            this.buttonDeleteOrg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDeleteOrg.Location = new System.Drawing.Point(16, 130);
             this.buttonDeleteOrg.Name = "buttonDeleteOrg";
-            this.buttonDeleteOrg.Size = new System.Drawing.Size(245, 110);
+            this.buttonDeleteOrg.Size = new System.Drawing.Size(163, 70);
             this.buttonDeleteOrg.TabIndex = 1;
             this.buttonDeleteOrg.Text = "Delete";
             this.buttonDeleteOrg.UseVisualStyleBackColor = true;
@@ -171,11 +187,12 @@ namespace PL
             this.dataGridViewOrganisation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewOrganisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrganisation.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridViewOrganisation.Location = new System.Drawing.Point(308, 3);
+            this.dataGridViewOrganisation.Location = new System.Drawing.Point(203, 2);
+            this.dataGridViewOrganisation.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewOrganisation.Name = "dataGridViewOrganisation";
             this.dataGridViewOrganisation.RowHeadersWidth = 72;
             this.dataGridViewOrganisation.RowTemplate.Height = 37;
-            this.dataGridViewOrganisation.Size = new System.Drawing.Size(1100, 796);
+            this.dataGridViewOrganisation.Size = new System.Drawing.Size(733, 499);
             this.dataGridViewOrganisation.TabIndex = 0;
             // 
             // tabPage2
@@ -188,19 +205,21 @@ namespace PL
             this.tabPage2.Controls.Add(this.buttonAddLec);
             this.tabPage2.Controls.Add(this.buttonDeleteLec);
             this.tabPage2.Controls.Add(this.dataGridViewLecturers);
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1411, 802);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(938, 503);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lecturers";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // buttonExportExcelLec
             // 
-            this.buttonExportExcelLec.Location = new System.Drawing.Point(24, 660);
+            this.buttonExportExcelLec.Location = new System.Drawing.Point(16, 418);
+            this.buttonExportExcelLec.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportExcelLec.Name = "buttonExportExcelLec";
-            this.buttonExportExcelLec.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportExcelLec.Size = new System.Drawing.Size(163, 70);
             this.buttonExportExcelLec.TabIndex = 7;
             this.buttonExportExcelLec.Text = "Export to excel document";
             this.buttonExportExcelLec.UseVisualStyleBackColor = true;
@@ -208,9 +227,10 @@ namespace PL
             // 
             // buttonExportWordLec
             // 
-            this.buttonExportWordLec.Location = new System.Drawing.Point(24, 496);
+            this.buttonExportWordLec.Location = new System.Drawing.Point(16, 314);
+            this.buttonExportWordLec.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportWordLec.Name = "buttonExportWordLec";
-            this.buttonExportWordLec.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportWordLec.Size = new System.Drawing.Size(163, 70);
             this.buttonExportWordLec.TabIndex = 6;
             this.buttonExportWordLec.Text = "Export to word document";
             this.buttonExportWordLec.UseVisualStyleBackColor = true;
@@ -219,36 +239,38 @@ namespace PL
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 374);
+            this.label2.Location = new System.Drawing.Point(16, 237);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 30);
+            this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Filter";
             // 
             // textBoxFilterLecturers
             // 
-            this.textBoxFilterLecturers.Location = new System.Drawing.Point(83, 371);
+            this.textBoxFilterLecturers.Location = new System.Drawing.Point(55, 235);
+            this.textBoxFilterLecturers.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFilterLecturers.Name = "textBoxFilterLecturers";
-            this.textBoxFilterLecturers.Size = new System.Drawing.Size(186, 35);
+            this.textBoxFilterLecturers.Size = new System.Drawing.Size(125, 26);
             this.textBoxFilterLecturers.TabIndex = 4;
             this.textBoxFilterLecturers.TextChanged += new System.EventHandler(this.textBoxFilterLecturers_TextChanged);
             // 
             // checkBoxOrderLec
             // 
             this.checkBoxOrderLec.AutoSize = true;
-            this.checkBoxOrderLec.Location = new System.Drawing.Point(24, 427);
+            this.checkBoxOrderLec.Location = new System.Drawing.Point(16, 270);
+            this.checkBoxOrderLec.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxOrderLec.Name = "checkBoxOrderLec";
-            this.checkBoxOrderLec.Size = new System.Drawing.Size(190, 34);
+            this.checkBoxOrderLec.Size = new System.Drawing.Size(137, 24);
             this.checkBoxOrderLec.TabIndex = 3;
             this.checkBoxOrderLec.Text = "Order by degree";
             this.checkBoxOrderLec.UseVisualStyleBackColor = true;
             // 
             // buttonAddLec
             // 
-            this.buttonAddLec.Location = new System.Drawing.Point(24, 43);
-            this.buttonAddLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAddLec.Location = new System.Drawing.Point(16, 27);
             this.buttonAddLec.Name = "buttonAddLec";
-            this.buttonAddLec.Size = new System.Drawing.Size(245, 110);
+            this.buttonAddLec.Size = new System.Drawing.Size(163, 70);
             this.buttonAddLec.TabIndex = 2;
             this.buttonAddLec.Text = "Add";
             this.buttonAddLec.UseVisualStyleBackColor = true;
@@ -256,10 +278,9 @@ namespace PL
             // 
             // buttonDeleteLec
             // 
-            this.buttonDeleteLec.Location = new System.Drawing.Point(24, 205);
-            this.buttonDeleteLec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDeleteLec.Location = new System.Drawing.Point(16, 130);
             this.buttonDeleteLec.Name = "buttonDeleteLec";
-            this.buttonDeleteLec.Size = new System.Drawing.Size(245, 110);
+            this.buttonDeleteLec.Size = new System.Drawing.Size(163, 70);
             this.buttonDeleteLec.TabIndex = 1;
             this.buttonDeleteLec.Text = "Delete";
             this.buttonDeleteLec.UseVisualStyleBackColor = true;
@@ -271,11 +292,12 @@ namespace PL
             this.dataGridViewLecturers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewLecturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLecturers.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridViewLecturers.Location = new System.Drawing.Point(308, 3);
+            this.dataGridViewLecturers.Location = new System.Drawing.Point(203, 2);
+            this.dataGridViewLecturers.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewLecturers.Name = "dataGridViewLecturers";
             this.dataGridViewLecturers.RowHeadersWidth = 72;
             this.dataGridViewLecturers.RowTemplate.Height = 37;
-            this.dataGridViewLecturers.Size = new System.Drawing.Size(1100, 796);
+            this.dataGridViewLecturers.Size = new System.Drawing.Size(733, 499);
             this.dataGridViewLecturers.TabIndex = 0;
             // 
             // tabPage3
@@ -288,19 +310,21 @@ namespace PL
             this.tabPage3.Controls.Add(this.buttonAddCourse);
             this.tabPage3.Controls.Add(this.buttonDeleteCourse);
             this.tabPage3.Controls.Add(this.dataGridViewCourses);
-            this.tabPage3.Location = new System.Drawing.Point(4, 39);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1411, 802);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(938, 503);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Courses";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // buttonExportExcelCourses
             // 
-            this.buttonExportExcelCourses.Location = new System.Drawing.Point(24, 660);
+            this.buttonExportExcelCourses.Location = new System.Drawing.Point(16, 418);
+            this.buttonExportExcelCourses.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportExcelCourses.Name = "buttonExportExcelCourses";
-            this.buttonExportExcelCourses.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportExcelCourses.Size = new System.Drawing.Size(163, 70);
             this.buttonExportExcelCourses.TabIndex = 7;
             this.buttonExportExcelCourses.Text = "Export to excel document";
             this.buttonExportExcelCourses.UseVisualStyleBackColor = true;
@@ -308,9 +332,10 @@ namespace PL
             // 
             // buttonExportWordCourses
             // 
-            this.buttonExportWordCourses.Location = new System.Drawing.Point(24, 496);
+            this.buttonExportWordCourses.Location = new System.Drawing.Point(16, 314);
+            this.buttonExportWordCourses.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportWordCourses.Name = "buttonExportWordCourses";
-            this.buttonExportWordCourses.Size = new System.Drawing.Size(245, 110);
+            this.buttonExportWordCourses.Size = new System.Drawing.Size(163, 70);
             this.buttonExportWordCourses.TabIndex = 6;
             this.buttonExportWordCourses.Text = "Export to word document";
             this.buttonExportWordCourses.UseVisualStyleBackColor = true;
@@ -319,46 +344,49 @@ namespace PL
             // checkBoxOrderCourses
             // 
             this.checkBoxOrderCourses.AutoSize = true;
-            this.checkBoxOrderCourses.Location = new System.Drawing.Point(24, 427);
+            this.checkBoxOrderCourses.Font = new System.Drawing.Font("Segoe UI", 8.139131F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxOrderCourses.Location = new System.Drawing.Point(16, 270);
+            this.checkBoxOrderCourses.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxOrderCourses.Name = "checkBoxOrderCourses";
-            this.checkBoxOrderCourses.Size = new System.Drawing.Size(274, 34);
+            this.checkBoxOrderCourses.Size = new System.Drawing.Size(178, 21);
             this.checkBoxOrderCourses.TabIndex = 5;
             this.checkBoxOrderCourses.Text = "Order by price after taxes";
             this.checkBoxOrderCourses.UseVisualStyleBackColor = true;
             // 
             // textBoxFilterCourses
             // 
-            this.textBoxFilterCourses.Location = new System.Drawing.Point(83, 371);
+            this.textBoxFilterCourses.Location = new System.Drawing.Point(55, 235);
+            this.textBoxFilterCourses.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFilterCourses.Name = "textBoxFilterCourses";
-            this.textBoxFilterCourses.Size = new System.Drawing.Size(186, 35);
+            this.textBoxFilterCourses.Size = new System.Drawing.Size(125, 26);
             this.textBoxFilterCourses.TabIndex = 4;
             this.textBoxFilterCourses.TextChanged += new System.EventHandler(this.textBoxFilterCourses_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 374);
+            this.label3.Location = new System.Drawing.Point(16, 237);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 30);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Filter";
             // 
             // buttonAddCourse
             // 
-            this.buttonAddCourse.Location = new System.Drawing.Point(24, 43);
-            this.buttonAddCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonAddCourse.Location = new System.Drawing.Point(16, 27);
             this.buttonAddCourse.Name = "buttonAddCourse";
-            this.buttonAddCourse.Size = new System.Drawing.Size(245, 110);
+            this.buttonAddCourse.Size = new System.Drawing.Size(163, 70);
             this.buttonAddCourse.TabIndex = 2;
             this.buttonAddCourse.Text = "Add";
             this.buttonAddCourse.UseVisualStyleBackColor = true;
+            this.buttonAddCourse.Click += new System.EventHandler(this.buttonAddCourse_Click);
             // 
             // buttonDeleteCourse
             // 
-            this.buttonDeleteCourse.Location = new System.Drawing.Point(24, 205);
-            this.buttonDeleteCourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonDeleteCourse.Location = new System.Drawing.Point(16, 130);
             this.buttonDeleteCourse.Name = "buttonDeleteCourse";
-            this.buttonDeleteCourse.Size = new System.Drawing.Size(245, 110);
+            this.buttonDeleteCourse.Size = new System.Drawing.Size(163, 70);
             this.buttonDeleteCourse.TabIndex = 1;
             this.buttonDeleteCourse.Text = "Delete";
             this.buttonDeleteCourse.UseVisualStyleBackColor = true;
@@ -370,19 +398,100 @@ namespace PL
             this.dataGridViewCourses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCourses.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridViewCourses.Location = new System.Drawing.Point(308, 3);
+            this.dataGridViewCourses.Location = new System.Drawing.Point(203, 2);
+            this.dataGridViewCourses.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCourses.Name = "dataGridViewCourses";
             this.dataGridViewCourses.RowHeadersWidth = 72;
             this.dataGridViewCourses.RowTemplate.Height = 37;
-            this.dataGridViewCourses.Size = new System.Drawing.Size(1100, 796);
+            this.dataGridViewCourses.Size = new System.Drawing.Size(733, 499);
             this.dataGridViewCourses.TabIndex = 0;
+            // 
+            // otherPage
+            // 
+            this.otherPage.Controls.Add(this.panel1);
+            this.otherPage.Location = new System.Drawing.Point(4, 28);
+            this.otherPage.Name = "otherPage";
+            this.otherPage.Padding = new System.Windows.Forms.Padding(3);
+            this.otherPage.Size = new System.Drawing.Size(938, 503);
+            this.otherPage.TabIndex = 3;
+            this.otherPage.Text = "Other";
+            this.otherPage.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonSendFeedback);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.msgTB);
+            this.panel1.Controls.Add(this.subjectTB);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(469, 497);
+            this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(100, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Send feedback";
+            // 
+            // subjectTB
+            // 
+            this.subjectTB.Location = new System.Drawing.Point(15, 108);
+            this.subjectTB.Name = "subjectTB";
+            this.subjectTB.Size = new System.Drawing.Size(320, 26);
+            this.subjectTB.TabIndex = 1;
+            // 
+            // msgTB
+            // 
+            this.msgTB.Location = new System.Drawing.Point(15, 187);
+            this.msgTB.Multiline = true;
+            this.msgTB.Name = "msgTB";
+            this.msgTB.Size = new System.Drawing.Size(320, 206);
+            this.msgTB.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Subject:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Message:";
+            // 
+            // buttonSendFeedback
+            // 
+            this.buttonSendFeedback.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonSendFeedback.Location = new System.Drawing.Point(0, 436);
+            this.buttonSendFeedback.Name = "buttonSendFeedback";
+            this.buttonSendFeedback.Size = new System.Drawing.Size(469, 61);
+            this.buttonSendFeedback.TabIndex = 5;
+            this.buttonSendFeedback.Text = "Send";
+            this.buttonSendFeedback.UseVisualStyleBackColor = true;
+            this.buttonSendFeedback.Click += new System.EventHandler(this.buttonSendFeedback_Click);
             // 
             // FormDB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.ClientSize = new System.Drawing.Size(946, 535);
             this.Controls.Add(this.Organisations);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDB";
@@ -396,6 +505,9 @@ namespace PL
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
+            this.otherPage.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -430,5 +542,13 @@ namespace PL
         private System.Windows.Forms.CheckBox checkBoxOrderCourses;
         private System.Windows.Forms.TextBox textBoxFilterCourses;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage otherPage;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonSendFeedback;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox msgTB;
+        private System.Windows.Forms.TextBox subjectTB;
+        private System.Windows.Forms.Label label4;
     }
 }
