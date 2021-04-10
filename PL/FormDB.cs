@@ -32,7 +32,7 @@ namespace PL
             AttachCourses();
             AttachLecturers();
             AttachOrganisations();
-            //Export_Data_To_Word(organisations, "organisations.docx");
+            Export_Data_To_Word(organisations, "organisations.docx");
             //Export_To_Excel(organisations, "organisations.xls");
         }
 
