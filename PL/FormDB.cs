@@ -20,7 +20,6 @@ namespace PL
         private DataGridView organisations;
         private DataGridView lecturers;
         private DataGridView courses;
-
         public FormDB()
         {
             context = new CoursesContext();
@@ -32,9 +31,8 @@ namespace PL
             AttachCourses();
             AttachLecturers();
             AttachOrganisations();
-            //Export_Data_To_Word(organisations, "organisations.docx");
-            //Export_To_Excel(organisations, "organisations.xls");
         }
+
 
         public void AttachOrganisations() => organisations.DataSource = context.Organisations.ToList();
         public void AttachLecturers() => lecturers.DataSource = context.Lecturers.ToList();
@@ -263,6 +261,42 @@ namespace PL
         {
             var addLecturerForm = new AddLecForm();
             addLecturerForm.ShowDialog();
+        }
+
+        private void buttonExportWordOrg_Click(object sender, EventArgs e) => Export_Data_To_Word(organisations, "organisations.docx");
+        private void buttonExportExcelOrg_Click(object sender, EventArgs e) => Export_To_Excel(organisations, "organisations.xls");
+        private void buttonExportWordLec_Click(object sender, EventArgs e) => Export_Data_To_Word(lecturers, "lecturers.docx");
+        private void buttonExportExcelLec_Click(object sender, EventArgs e) => Export_To_Excel(lecturers, "lecturers.xls");
+        private void buttonExportWordCourses_Click(object sender, EventArgs e) => Export_Data_To_Word(courses, "courses.docx");
+        private void buttonExportExcelCourses_Click(object sender, EventArgs e) => Export_To_Excel(courses, "courses.xls");
+
+        private void textBoxFilterOrgName_TextChanged(object sender, EventArgs e)
+        {
+            var filteredList = context.Organisations.Where(x => x.CourseName.Contains(textBoxFilterOrgName.Text));
+            organisations.DataSource = checkBoxOrderOrg.Checked ? filteredList.OrderBy(x => x.CourseName).ToList() : filteredList.ToList();
+        }
+
+        private void textBoxFilterLecturers_TextChanged(object sender, EventArgs e)
+        {
+            var filteredList = context.Lecturers.Where(x => (x.Name + " " + x.Surname).Contains(textBoxFilterLecturers.Text));
+            lecturers.DataSource = checkBoxOrderLec.Checked? filteredList.OrderBy(x => x.Degree).ToList(): filteredList.ToList();
+        }
+
+        private void textBoxFilterCourses_TextChanged(object sender, EventArgs e)
+        {
+            var filteredList = context.Courses.Where(x => x.CourseName.Contains(textBoxFilterCourses.Text)).Select(x => new
+            {
+                ID = x.ID,
+                Organisation = x.Organisation.CourseName,
+                Lecturer = x.Lecturer.Name + " " + x.Lecturer.Surname,
+                CourseName = x.CourseName,
+                CourseType = x.CourseType,
+                LenghtDays = x.LengthDays,
+                Places = x.Places,
+                Price = x.Price,
+                TaxPrice = x.TaxPrice
+            });
+            courses.DataSource = checkBoxOrderCourses.Checked ? filteredList.OrderBy(x => x.TaxPrice).ToList() : filteredList.ToList();
         }
     }
 }
