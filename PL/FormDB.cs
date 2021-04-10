@@ -231,7 +231,7 @@ namespace PL
         }
 
 
-        private void Export_To_Excel(DataGridView dGV, string filename)
+        public void Export_To_Excel(DataGridView dGV, string filename)
         {
             string stOutput = "";
             // Export titles:
@@ -258,6 +258,11 @@ namespace PL
 
 
         }
-    }
 
+        private void buttonAddLec_Click(object sender, EventArgs e)
+        {
+            var addLecturerForm = new AddLecForm();
+            addLecturerForm.ShowDialog();
+        }
+    }
 }

@@ -31,15 +31,17 @@ namespace PL
         {
             this.Organisations = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonAddOrg = new System.Windows.Forms.Button();
             this.buttonDeleteOrg = new System.Windows.Forms.Button();
             this.dataGridViewOrganisation = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonAddLec = new System.Windows.Forms.Button();
             this.buttonDeleteLec = new System.Windows.Forms.Button();
             this.dataGridViewLecturers = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonAddCourse = new System.Windows.Forms.Button();
             this.buttonDeleteCourse = new System.Windows.Forms.Button();
             this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
-            this.buttonAddCourse = new System.Windows.Forms.Button();
             this.Organisations.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganisation)).BeginInit();
@@ -64,6 +66,7 @@ namespace PL
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonAddOrg);
             this.tabPage1.Controls.Add(this.buttonDeleteOrg);
             this.tabPage1.Controls.Add(this.dataGridViewOrganisation);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
@@ -75,9 +78,18 @@ namespace PL
             this.tabPage1.Text = "Organisations";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonAddOrg
+            // 
+            this.buttonAddOrg.Location = new System.Drawing.Point(19, 62);
+            this.buttonAddOrg.Name = "buttonAddOrg";
+            this.buttonAddOrg.Size = new System.Drawing.Size(90, 28);
+            this.buttonAddOrg.TabIndex = 2;
+            this.buttonAddOrg.Text = "Add";
+            this.buttonAddOrg.UseVisualStyleBackColor = true;
+            // 
             // buttonDeleteOrg
             // 
-            this.buttonDeleteOrg.Location = new System.Drawing.Point(27, 54);
+            this.buttonDeleteOrg.Location = new System.Drawing.Point(19, 103);
             this.buttonDeleteOrg.Name = "buttonDeleteOrg";
             this.buttonDeleteOrg.Size = new System.Drawing.Size(90, 28);
             this.buttonDeleteOrg.TabIndex = 1;
@@ -101,6 +113,7 @@ namespace PL
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.buttonAddLec);
             this.tabPage2.Controls.Add(this.buttonDeleteLec);
             this.tabPage2.Controls.Add(this.dataGridViewLecturers);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
@@ -112,9 +125,19 @@ namespace PL
             this.tabPage2.Text = "Lecturers";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // buttonAddLec
+            // 
+            this.buttonAddLec.Location = new System.Drawing.Point(55, 105);
+            this.buttonAddLec.Name = "buttonAddLec";
+            this.buttonAddLec.Size = new System.Drawing.Size(90, 28);
+            this.buttonAddLec.TabIndex = 2;
+            this.buttonAddLec.Text = "Add";
+            this.buttonAddLec.UseVisualStyleBackColor = true;
+            this.buttonAddLec.Click += new System.EventHandler(this.buttonAddLec_Click);
+            // 
             // buttonDeleteLec
             // 
-            this.buttonDeleteLec.Location = new System.Drawing.Point(59, 76);
+            this.buttonDeleteLec.Location = new System.Drawing.Point(55, 140);
             this.buttonDeleteLec.Name = "buttonDeleteLec";
             this.buttonDeleteLec.Size = new System.Drawing.Size(90, 28);
             this.buttonDeleteLec.TabIndex = 1;
@@ -150,6 +173,15 @@ namespace PL
             this.tabPage3.Text = "Courses";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonAddCourse
+            // 
+            this.buttonAddCourse.Location = new System.Drawing.Point(57, 64);
+            this.buttonAddCourse.Name = "buttonAddCourse";
+            this.buttonAddCourse.Size = new System.Drawing.Size(90, 28);
+            this.buttonAddCourse.TabIndex = 2;
+            this.buttonAddCourse.Text = "Add";
+            this.buttonAddCourse.UseVisualStyleBackColor = true;
+            // 
             // buttonDeleteCourse
             // 
             this.buttonDeleteCourse.Location = new System.Drawing.Point(57, 98);
@@ -174,15 +206,6 @@ namespace PL
             this.dataGridViewCourses.Size = new System.Drawing.Size(600, 463);
             this.dataGridViewCourses.TabIndex = 0;
             // 
-            // buttonAddCourse
-            // 
-            this.buttonAddCourse.Location = new System.Drawing.Point(57, 64);
-            this.buttonAddCourse.Name = "buttonAddCourse";
-            this.buttonAddCourse.Size = new System.Drawing.Size(90, 28);
-            this.buttonAddCourse.TabIndex = 2;
-            this.buttonAddCourse.Text = "Add";
-            this.buttonAddCourse.UseVisualStyleBackColor = true;
-            // 
             // FormDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -191,6 +214,7 @@ namespace PL
             this.Controls.Add(this.Organisations);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDB";
             this.Organisations.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -216,5 +240,7 @@ namespace PL
         private System.Windows.Forms.Button buttonDeleteLec;
         private System.Windows.Forms.Button buttonDeleteCourse;
         private System.Windows.Forms.Button buttonAddCourse;
+        private System.Windows.Forms.Button buttonAddOrg;
+        private System.Windows.Forms.Button buttonAddLec;
     }
 }
