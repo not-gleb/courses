@@ -5,6 +5,8 @@ using System;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
 
@@ -289,6 +291,44 @@ namespace PL
         {
             var addOrganisationForm = new AddOrgForm();
             addOrganisationForm.ShowDialog();
+        }
+
+        private void buttonAddCourse_Click(object sender, EventArgs e)
+        {
+            var addCourseForm = new AddCourseForm();
+            addCourseForm.ShowDialog();
+        }
+
+        private void buttonSendFeedback_Click(object sender, EventArgs e)
+        {
+            if (subjectTB.Text == String.Empty || msgTB.Text == String.Empty)
+            {
+                MessageBox.Show(this, "Incorrect data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var fromAdress = new MailAddress("ruslan.poghorilyj@kitu.nau.edu.ua", "App feedback");
+            var toAdress = new MailAddress("tgvyhb389@gmail.com", "Creator");
+            const string fromPassword = "password";
+
+            var smtpClient = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAdress.Address, fromPassword),
+                Timeout = 20000
+            };
+
+            using var message = new System.Net.Mail.MailMessage(fromAdress, toAdress)
+            {
+                Subject = subjectTB.Text,
+                Body = msgTB.Text
+            };
+
+            smtpClient.Send(message);
         }
     }
 }
