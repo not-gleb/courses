@@ -12,10 +12,10 @@ using Data.Entities;
 
 namespace PL
 {
-    public partial class Form1 : Form
+    public partial class AuthorisationForm : Form
     {
         private Panel currentPanel;
-        public Form1()
+        public AuthorisationForm()
         {
             InitializeComponent();
             
@@ -89,6 +89,8 @@ namespace PL
                 ctx.SaveChanges();
             }
             MessageBox.Show("Registered successfully");
+            currentPanel = panelLogIn;
+            currentPanel.Visible = true;
         }
 
         public void CurrentVisibleFalse() => currentPanel.Visible = false;

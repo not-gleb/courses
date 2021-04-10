@@ -272,7 +272,7 @@ namespace PL
             this.Controls.Add(this.buttonWelcomeMenuLogIn);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Courses";
+            this.Text = "Authorisation";
             this.panelLogIn.ResumeLayout(false);
             this.panelLogIn.PerformLayout();
             this.panelRegister.ResumeLayout(false);
