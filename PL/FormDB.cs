@@ -2,14 +2,10 @@
 using Data.Entities;
 using Microsoft.Office.Interop.Word;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PL
@@ -32,7 +28,6 @@ namespace PL
             AttachLecturers();
             AttachOrganisations();
         }
-
 
         public void AttachOrganisations() => organisations.DataSource = context.Organisations.ToList();
         public void AttachLecturers() => lecturers.DataSource = context.Lecturers.ToList();
@@ -169,7 +164,6 @@ namespace PL
                 //page orintation
                 oDoc.PageSetup.Orientation = WdOrientation.wdOrientLandscape;
 
-
                 dynamic oRange = oDoc.Content.Application.Selection.Range;
                 string oTemp = "";
                 for (r = 0; r <= RowCount - 1; r++)
@@ -218,10 +212,7 @@ namespace PL
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
 
-                //save the file
                 oDoc.SaveAs2(filename);
-
-                //NASSIM LOUCHANI
             }
         }
 
