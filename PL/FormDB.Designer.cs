@@ -86,6 +86,7 @@ namespace PL
             this.buttonAddOrg.TabIndex = 2;
             this.buttonAddOrg.Text = "Add";
             this.buttonAddOrg.UseVisualStyleBackColor = true;
+            this.buttonAddOrg.Click += new System.EventHandler(this.buttonAddOrg_Click);
             // 
             // buttonDeleteOrg
             // 

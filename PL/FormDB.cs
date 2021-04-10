@@ -179,7 +179,6 @@ namespace PL
                     for (int c = 0; c <= ColumnCount - 1; c++)
                     {
                         oTemp = oTemp + DataArray[r, c] + "\t";
-
                     }
                 }
 
@@ -221,8 +220,6 @@ namespace PL
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
 
-
-
                 //save the file
                 oDoc.SaveAs2(filename);
 
@@ -255,14 +252,18 @@ namespace PL
             bw.Write(output, 0, output.Length); //write the encoded file
             bw.Flush();
             bw.Close();
-
-
         }
 
         private void buttonAddLec_Click(object sender, EventArgs e)
         {
             var addLecturerForm = new AddLecForm();
             addLecturerForm.ShowDialog();
+        }
+
+        private void buttonAddOrg_Click(object sender, EventArgs e)
+        {
+            var addOrganisationForm = new AddOrgForm();
+            addOrganisationForm.ShowDialog();
         }
     }
 }

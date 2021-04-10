@@ -182,3 +182,6 @@ C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.Add
 >>>>>>> a7b2ff5e5f530490e89909f76e7b8a8d2548e296
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.AddLecForm.resources
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.AddOrgForm.resources
+C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.csproj.ResolveComReference.cache
