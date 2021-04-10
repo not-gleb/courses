@@ -142,5 +142,11 @@ namespace PL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonAddLec_Click(object sender, EventArgs e)
+        {
+            var addLecturerForm = new AddLecForm();
+            addLecturerForm.ShowDialog();
+        }
     }
 }

@@ -260,7 +260,7 @@ namespace PL
             this.label3.TabIndex = 0;
             this.label3.Text = "Welcome!";
             // 
-            // Form1
+            // AuthorisationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,7 +271,9 @@ namespace PL
             this.Controls.Add(this.buttonWelcomeMenuRegister);
             this.Controls.Add(this.buttonWelcomeMenuLogIn);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "AuthorisationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authorisation";
             this.panelLogIn.ResumeLayout(false);
             this.panelLogIn.PerformLayout();

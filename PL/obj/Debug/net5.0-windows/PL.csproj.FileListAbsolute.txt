@@ -172,3 +172,5 @@ C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.gen
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.FormDB.resources
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.FormDB.resources
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.AuthorisationForm.resources
+C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.AddLecForm.resources
+C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.AddOrgForm.resources
