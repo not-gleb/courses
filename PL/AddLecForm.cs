@@ -31,7 +31,7 @@ namespace PL
 
             try
             {
-                using (var context = new CoursesContext())
+                using (CoursesContext context = new CoursesContext())
                 {
                     context.Lecturers.Add(lecturerToAdd);
                     context.SaveChanges();
