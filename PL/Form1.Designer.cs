@@ -56,28 +56,31 @@ namespace PL
             // 
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.Location = new System.Drawing.Point(357, 156);
+            this.textBoxUsername.Location = new System.Drawing.Point(238, 99);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(327, 35);
+            this.textBoxUsername.Size = new System.Drawing.Size(219, 26);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.Location = new System.Drawing.Point(357, 220);
+            this.textBoxPassword.Location = new System.Drawing.Point(238, 139);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '●';
-            this.textBoxPassword.Size = new System.Drawing.Size(327, 35);
+            this.textBoxPassword.Size = new System.Drawing.Size(219, 26);
             this.textBoxPassword.TabIndex = 1;
             // 
             // buttonLogIn
             // 
             this.buttonLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLogIn.Location = new System.Drawing.Point(240, 291);
+            this.buttonLogIn.Location = new System.Drawing.Point(160, 184);
+            this.buttonLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(469, 70);
+            this.buttonLogIn.Size = new System.Drawing.Size(313, 44);
             this.buttonLogIn.TabIndex = 2;
             this.buttonLogIn.Text = "Log In";
             this.buttonLogIn.UseVisualStyleBackColor = true;
@@ -86,18 +89,20 @@ namespace PL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(247, 156);
+            this.label1.Location = new System.Drawing.Point(165, 99);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 30);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 225);
+            this.label2.Location = new System.Drawing.Point(165, 142);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 30);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password:";
             // 
@@ -109,18 +114,19 @@ namespace PL
             this.panelLogIn.Controls.Add(this.textBoxUsername);
             this.panelLogIn.Controls.Add(this.textBoxPassword);
             this.panelLogIn.Controls.Add(this.buttonLogIn);
-            this.panelLogIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogIn.Location = new System.Drawing.Point(0, 0);
+            this.panelLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogIn.Name = "panelLogIn";
-            this.panelLogIn.Size = new System.Drawing.Size(952, 527);
+            this.panelLogIn.Size = new System.Drawing.Size(635, 334);
             this.panelLogIn.TabIndex = 20;
             this.panelLogIn.Visible = false;
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(12, 23);
+            this.buttonBack.Location = new System.Drawing.Point(8, 15);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(57, 60);
+            this.buttonBack.Size = new System.Drawing.Size(38, 38);
             this.buttonBack.TabIndex = 5;
             this.buttonBack.Text = "<--";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -136,18 +142,19 @@ namespace PL
             this.panelRegister.Controls.Add(this.textBoxRegPW);
             this.panelRegister.Controls.Add(this.textBoxRegUsername);
             this.panelRegister.Controls.Add(this.buttonRegisterUser);
-            this.panelRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRegister.Location = new System.Drawing.Point(0, 0);
+            this.panelRegister.Margin = new System.Windows.Forms.Padding(2);
             this.panelRegister.Name = "panelRegister";
-            this.panelRegister.Size = new System.Drawing.Size(952, 527);
+            this.panelRegister.Size = new System.Drawing.Size(635, 334);
             this.panelRegister.TabIndex = 20;
             this.panelRegister.Visible = false;
             // 
             // buttonBack2
             // 
-            this.buttonBack2.Location = new System.Drawing.Point(21, 23);
+            this.buttonBack2.Location = new System.Drawing.Point(14, 15);
+            this.buttonBack2.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack2.Name = "buttonBack2";
-            this.buttonBack2.Size = new System.Drawing.Size(72, 60);
+            this.buttonBack2.Size = new System.Drawing.Size(48, 38);
             this.buttonBack2.TabIndex = 7;
             this.buttonBack2.Text = "<--";
             this.buttonBack2.UseVisualStyleBackColor = true;
@@ -156,58 +163,65 @@ namespace PL
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(187, 228);
+            this.label6.Location = new System.Drawing.Point(125, 144);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 30);
+            this.label6.Size = new System.Drawing.Size(132, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "Confirm password:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(187, 159);
+            this.label5.Location = new System.Drawing.Point(125, 101);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 30);
+            this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Password:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 92);
+            this.label4.Location = new System.Drawing.Point(125, 58);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 30);
+            this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Username:";
             // 
             // textBoxRegPWConfirm
             // 
-            this.textBoxRegPWConfirm.Location = new System.Drawing.Point(374, 225);
+            this.textBoxRegPWConfirm.Location = new System.Drawing.Point(261, 142);
+            this.textBoxRegPWConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRegPWConfirm.Name = "textBoxRegPWConfirm";
             this.textBoxRegPWConfirm.PasswordChar = '●';
-            this.textBoxRegPWConfirm.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegPWConfirm.Size = new System.Drawing.Size(225, 26);
             this.textBoxRegPWConfirm.TabIndex = 3;
             // 
             // textBoxRegPW
             // 
-            this.textBoxRegPW.Location = new System.Drawing.Point(374, 156);
+            this.textBoxRegPW.Location = new System.Drawing.Point(261, 98);
+            this.textBoxRegPW.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRegPW.Name = "textBoxRegPW";
             this.textBoxRegPW.PasswordChar = '●';
-            this.textBoxRegPW.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegPW.Size = new System.Drawing.Size(225, 26);
             this.textBoxRegPW.TabIndex = 2;
             // 
             // textBoxRegUsername
             // 
-            this.textBoxRegUsername.Location = new System.Drawing.Point(374, 89);
+            this.textBoxRegUsername.Location = new System.Drawing.Point(261, 58);
+            this.textBoxRegUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRegUsername.Name = "textBoxRegUsername";
-            this.textBoxRegUsername.Size = new System.Drawing.Size(335, 35);
+            this.textBoxRegUsername.Size = new System.Drawing.Size(225, 26);
             this.textBoxRegUsername.TabIndex = 1;
             // 
             // buttonRegisterUser
             // 
-            this.buttonRegisterUser.Location = new System.Drawing.Point(187, 291);
+            this.buttonRegisterUser.Location = new System.Drawing.Point(125, 184);
+            this.buttonRegisterUser.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegisterUser.Name = "buttonRegisterUser";
-            this.buttonRegisterUser.Size = new System.Drawing.Size(522, 70);
+            this.buttonRegisterUser.Size = new System.Drawing.Size(361, 44);
             this.buttonRegisterUser.TabIndex = 0;
             this.buttonRegisterUser.Text = "Register";
             this.buttonRegisterUser.UseVisualStyleBackColor = true;
@@ -215,9 +229,10 @@ namespace PL
             // 
             // buttonWelcomeMenuLogIn
             // 
-            this.buttonWelcomeMenuLogIn.Location = new System.Drawing.Point(283, 135);
+            this.buttonWelcomeMenuLogIn.Location = new System.Drawing.Point(189, 86);
+            this.buttonWelcomeMenuLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonWelcomeMenuLogIn.Name = "buttonWelcomeMenuLogIn";
-            this.buttonWelcomeMenuLogIn.Size = new System.Drawing.Size(364, 79);
+            this.buttonWelcomeMenuLogIn.Size = new System.Drawing.Size(243, 50);
             this.buttonWelcomeMenuLogIn.TabIndex = 0;
             this.buttonWelcomeMenuLogIn.Text = "Log in";
             this.buttonWelcomeMenuLogIn.UseVisualStyleBackColor = true;
@@ -225,9 +240,10 @@ namespace PL
             // 
             // buttonWelcomeMenuRegister
             // 
-            this.buttonWelcomeMenuRegister.Location = new System.Drawing.Point(283, 291);
+            this.buttonWelcomeMenuRegister.Location = new System.Drawing.Point(189, 184);
+            this.buttonWelcomeMenuRegister.Margin = new System.Windows.Forms.Padding(2);
             this.buttonWelcomeMenuRegister.Name = "buttonWelcomeMenuRegister";
-            this.buttonWelcomeMenuRegister.Size = new System.Drawing.Size(364, 83);
+            this.buttonWelcomeMenuRegister.Size = new System.Drawing.Size(243, 53);
             this.buttonWelcomeMenuRegister.TabIndex = 0;
             this.buttonWelcomeMenuRegister.Text = "Register";
             this.buttonWelcomeMenuRegister.UseVisualStyleBackColor = true;
@@ -237,24 +253,26 @@ namespace PL
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(333, 9);
+            this.label3.Location = new System.Drawing.Point(222, 6);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(277, 74);
+            this.label3.Size = new System.Drawing.Size(191, 52);
             this.label3.TabIndex = 0;
             this.label3.Text = "Welcome!";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 527);
+            this.ClientSize = new System.Drawing.Size(635, 334);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.panelLogIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonWelcomeMenuRegister);
             this.Controls.Add(this.buttonWelcomeMenuLogIn);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Courses";
             this.panelLogIn.ResumeLayout(false);
             this.panelLogIn.PerformLayout();
             this.panelRegister.ResumeLayout(false);

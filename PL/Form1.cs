@@ -18,7 +18,8 @@ namespace PL
         public Form1()
         {
             InitializeComponent();
-            //var ctx = new CoursesContext();
+            
+           //var ctx = new CoursesContext();
             //dataGridView1.DataSource = ctx.Courses.ToList();
         }
 
@@ -51,7 +52,15 @@ namespace PL
         {
             string username = textBoxRegUsername.Text;
             string password = textBoxRegPW.Text;
+            
             string confirmation = textBoxRegPWConfirm.Text;
+
+            if (username == String.Empty || password == String.Empty || confirmation == String.Empty)
+            {
+                MessageBox.Show(this, "Fields should not be emplty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (password != confirmation)
             {
                 MessageBox.Show("Passwords do not match");
@@ -73,7 +82,7 @@ namespace PL
                 ctx.Users.Add(user);
                 ctx.SaveChanges();
             }
-            MessageBox.Show("Logged in successfuly");
+            MessageBox.Show("Registered successfully");
         }
 
         public void CurrentVisibleFalse() => currentPanel.Visible = false;
