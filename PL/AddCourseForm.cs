@@ -12,10 +12,17 @@ using System.Windows.Forms;
 
 namespace PL
 {
+
+    /// <summary>
+    /// Form includes elements which allow you to add new course to database
+    /// </summary>
     public partial class AddCourseForm : Form
     {
         private CoursesContext context;
 
+        /// <summary>
+        /// Initializes form and its elements
+        /// </summary>
         public AddCourseForm()
         {
             InitializeComponent();
@@ -42,7 +49,7 @@ namespace PL
 
             var lecturer = context.Lecturers.First(x => x.Name == lecturersLB.SelectedItem.ToString());
             var organisation = context.Organisations.First(x => x.CourseName == organisationsLB.SelectedItem.ToString());
-            var courseToAdd = new Course { CourseName = nameTB.Text, CourseType = typeTB.Text, Places = Convert.ToInt32(placesNumeric.Value), LengthDays = Convert.ToInt32(durationNumeric.Value), Price = Convert.ToInt32(priceNumeric.Value), Lecturer = lecturer, Organisation = organisation };
+            var courseToAdd = new Course { CourseName = nameTB.Text, CourseType = typeTB.Text, Places = Convert.ToInt32(placesNumeric.Value), LengthDays = Convert.ToInt32(durationNumeric.Value), Price = Convert.ToInt32(priceNumeric.Value), Lecturer = lecturer, Organisation = organisation, TaxPrice = Convert.ToInt32(priceNumeric.Value * 1.2m) };
             context.Courses.Add(courseToAdd);
             context.SaveChanges();
             this.Close();

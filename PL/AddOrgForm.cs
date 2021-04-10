@@ -6,10 +6,16 @@ using System.Windows.Forms;
 
 namespace PL
 {
+    /// <summary>
+    /// Form includes elements which allow you to add new organisation to database
+    /// </summary>
     public partial class AddOrgForm : Form
     {
         CoursesContext context;
 
+        /// <summary>
+        /// Initializes form
+        /// </summary>
         public AddOrgForm()
         {
             InitializeComponent();

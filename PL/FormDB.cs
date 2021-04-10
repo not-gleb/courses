@@ -12,12 +12,19 @@ using System.Windows.Forms;
 
 namespace PL
 {
+    /// <summary>
+    /// Form which works with database
+    /// </summary>
     public partial class FormDB : Form
     {
         private CoursesContext context;
         private DataGridView organisations;
         private DataGridView lecturers;
         private DataGridView courses;
+
+        /// <summary>
+        /// Database form constructor
+        /// </summary>
         public FormDB()
         {
             context = new CoursesContext();
@@ -31,8 +38,17 @@ namespace PL
             AttachOrganisations();
         }
 
+        /// <summary>
+        /// Attaches database context to organisations data grid view
+        /// </summary>
         public void AttachOrganisations() => organisations.DataSource = context.Organisations.ToList();
+        /// <summary>
+        /// Attaches database context to lectures data grid view
+        /// </summary>
         public void AttachLecturers() => lecturers.DataSource = context.Lecturers.ToList();
+        /// <summary>
+        /// Attaches database context to courses data grid view
+        /// </summary>
         public void AttachCourses() => courses.DataSource = context.Courses.Select(x => new
         {
             ID = x.ID,
@@ -46,6 +62,7 @@ namespace PL
             TaxPrice = x.TaxPrice
         }).ToList();
 
+
         private void buttonDeleteOrg_Click(object sender, EventArgs e)
         {
             if (organisations.SelectedRows.Count > 0)
@@ -58,19 +75,20 @@ namespace PL
             }
         }
 
+        /// <summary>
+        /// Removes organisation from database by its ID
+        /// </summary>
+        /// <param name="id">Organisation ID</param>
         public void DeleteOrgByID(int id)
         {
             var organisationToDelete = new Organisation { ID = id };
 
             try
             {
-                using (var context = new CoursesContext())
-                {
-                    context.Organisations.Remove(organisationToDelete);
-                    context.SaveChanges();
-                    AttachOrganisations();
-                    organisations.Update();
-                }
+                context.Organisations.Remove(organisationToDelete);
+                context.SaveChanges();
+                AttachOrganisations();
+                organisations.Update();
             }
             catch (Exception ex)
             {
@@ -90,19 +108,20 @@ namespace PL
             }
         }
 
+        /// <summary>
+        /// Removes lecturer from database by its ID
+        /// </summary>
+        /// <param name="id">Lecturers ID</param>
         public void DeleteLecByID(int id)
         {
             var LecturerToDelete = new Lecturer { ID = id };
 
             try
             {
-                using (var context = new CoursesContext())
-                {
-                    context.Lecturers.Remove(LecturerToDelete);
-                    context.SaveChanges();
-                    AttachLecturers();
-                    courses.Update();
-                }
+                context.Lecturers.Remove(LecturerToDelete);
+                context.SaveChanges();
+                AttachLecturers();
+                courses.Update();
             }
             catch (Exception ex)
             {
@@ -122,19 +141,20 @@ namespace PL
             }
         }
 
+        /// <summary>
+        /// Removes course from database by its ID
+        /// </summary>
+        /// <param name="id">Course ID</param>
         public void DeleteCourseByID(int id)
         {
             var courseToDelete = new Course { ID = id };
 
             try
             {
-                using (var context = new CoursesContext())
-                {
-                    context.Courses.Remove(courseToDelete);
-                    context.SaveChanges();
-                    AttachCourses();
-                    courses.Update();
-                }
+                context.Courses.Remove(courseToDelete);
+                context.SaveChanges();
+                AttachCourses();
+                courses.Update();
             }
             catch (Exception ex)
             {
@@ -142,6 +162,12 @@ namespace PL
             }
         }
 
+        /// <summary>
+        /// Creates word docx file with table.
+        /// Located in Documents folder
+        /// </summary>
+        /// <param name="DGV">DataGridViev object attached to database table</param>
+        /// <param name="filename">File name</param>
         public void Export_Data_To_Word(DataGridView DGV, string filename)
         {
             if (DGV.Rows.Count != 0)
@@ -219,6 +245,12 @@ namespace PL
         }
 
 
+        /// <summary>
+        /// Creates excel xls file with table.
+        /// Located in Documents folder
+        /// </summary>
+        /// <param name="dGV">DataGridViev object attached to database table</param>
+        /// <param name="filename">File name</param>
         public void Export_To_Excel(DataGridView dGV, string filename)
         {
             string stOutput = "";
@@ -249,8 +281,8 @@ namespace PL
         {
             var addLecturerForm = new AddLecForm();
             addLecturerForm.ShowDialog();
+            AttachLecturers();
         }
-
         private void buttonExportWordOrg_Click(object sender, EventArgs e) => Export_Data_To_Word(organisations, "organisations.docx");
         private void buttonExportExcelOrg_Click(object sender, EventArgs e) => Export_To_Excel(organisations, "organisations.xls");
         private void buttonExportWordLec_Click(object sender, EventArgs e) => Export_Data_To_Word(lecturers, "lecturers.docx");
@@ -291,12 +323,14 @@ namespace PL
         {
             var addOrganisationForm = new AddOrgForm();
             addOrganisationForm.ShowDialog();
+            AttachOrganisations();
         }
 
         private void buttonAddCourse_Click(object sender, EventArgs e)
         {
             var addCourseForm = new AddCourseForm();
             addCourseForm.ShowDialog();
+            AttachCourses();
         }
 
         private void buttonSendFeedback_Click(object sender, EventArgs e)

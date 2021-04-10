@@ -5,8 +5,14 @@ using System.Windows.Forms;
 
 namespace PL
 {
+    /// <summary>
+    /// Form includes elements which allow you to add new lecture to database
+    /// </summary>
     public partial class AddLecForm : Form
     {
+        /// <summary>
+        /// Initializes form
+        /// </summary>
         public AddLecForm()
         {
             InitializeComponent();

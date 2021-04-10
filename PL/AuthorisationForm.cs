@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace PL
 {
+    /// <summary>
+    /// Form used to authorize user
+    /// </summary>
     public partial class AuthorisationForm : Form
     {
         private Panel currentPanel;
@@ -13,9 +16,6 @@ namespace PL
         public AuthorisationForm()
         {
             InitializeComponent();
-
-            //var ctx = new CoursesContext();
-            //dataGridView1.DataSource = ctx.Courses.ToList();
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
@@ -83,10 +83,14 @@ namespace PL
                 ctx.SaveChanges();
             }
             MessageBox.Show("Registered successfully");
+            currentPanel.Visible = false;
             currentPanel = panelLogIn;
             currentPanel.Visible = true;
         }
 
+        /// <summary>
+        /// Hides current panel
+        /// </summary>
         public void CurrentVisibleFalse() => currentPanel.Visible = false;
 
         private void buttonBack2_Click(object sender, EventArgs e) => CurrentVisibleFalse();
