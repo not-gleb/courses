@@ -99,7 +99,6 @@ C:\Users\Данил\Desktop\courses\PL\bin\Debug\net5.0-windows\runtimes\win\lib
 C:\Users\Данил\Desktop\courses\PL\bin\Debug\net5.0-windows\Data.dll
 C:\Users\Данил\Desktop\courses\PL\bin\Debug\net5.0-windows\Data.pdb
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.csprojAssemblyReference.cache
-C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.Form1.resources
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.csproj.GenerateResource.cache
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.AssemblyInfoInputs.cache
@@ -172,3 +171,7 @@ C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.gen
 C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.FormDB.resources
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.FormDB.resources
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.AuthorisationForm.resources
+C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.AuthorisationForm.resources
+C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\PL.csproj.ResolveComReference.cache
+C:\Users\Данил\Desktop\courses\PL\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll

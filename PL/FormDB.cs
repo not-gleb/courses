@@ -1,10 +1,12 @@
 ﻿using Data;
 using Data.Entities;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +32,8 @@ namespace PL
             AttachCourses();
             AttachLecturers();
             AttachOrganisations();
+            //Export_Data_To_Word(organisations, "organisations.docx");
+            //Export_To_Excel(organisations, "organisations.xls");
         }
 
         public void AttachOrganisations() => organisations.DataSource = context.Organisations.ToList();
@@ -142,5 +146,118 @@ namespace PL
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void Export_Data_To_Word(DataGridView DGV, string filename)
+        {
+            if (DGV.Rows.Count != 0)
+            {
+                int RowCount = DGV.Rows.Count;
+                int ColumnCount = DGV.Columns.Count;
+                Object[,] DataArray = new object[RowCount + 1, ColumnCount + 1];
+
+                //add rows
+                int r = 0;
+                for (int c = 0; c <= ColumnCount - 1; c++)
+                {
+                    for (r = 0; r <= RowCount - 1; r++)
+                    {
+                        DataArray[r, c] = DGV.Rows[r].Cells[c].Value;
+                    } //end row loop
+                } //end column loop
+
+                Document oDoc = new Document();
+                oDoc.Application.Visible = true;
+
+                //page orintation
+                oDoc.PageSetup.Orientation = WdOrientation.wdOrientLandscape;
+
+
+                dynamic oRange = oDoc.Content.Application.Selection.Range;
+                string oTemp = "";
+                for (r = 0; r <= RowCount - 1; r++)
+                {
+                    for (int c = 0; c <= ColumnCount - 1; c++)
+                    {
+                        oTemp = oTemp + DataArray[r, c] + "\t";
+
+                    }
+                }
+
+                //table format
+                oRange.Text = oTemp;
+
+                object Separator = WdTableFieldSeparator.wdSeparateByTabs;
+                object ApplyBorders = true;
+                object AutoFit = true;
+                object AutoFitBehavior = WdAutoFitBehavior.wdAutoFitContent;
+
+                oRange.ConvertToTable(ref Separator, ref RowCount, ref ColumnCount,
+                                      Type.Missing, Type.Missing, ref ApplyBorders,
+                                      Type.Missing, Type.Missing, Type.Missing,
+                                      Type.Missing, Type.Missing, Type.Missing,
+                                      Type.Missing, ref AutoFit, ref AutoFitBehavior, Type.Missing);
+
+                oRange.Select();
+
+                oDoc.Application.Selection.Tables[1].Select();
+                oDoc.Application.Selection.Tables[1].Rows.AllowBreakAcrossPages = 0;
+                oDoc.Application.Selection.Tables[1].Rows.Alignment = 0;
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+                oDoc.Application.Selection.InsertRowsAbove(1);
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+
+                //header row style
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Bold = 1;
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Tahoma";
+                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 14;
+
+                //add header row manually
+                for (int c = 0; c <= ColumnCount - 1; c++)
+                {
+                    oDoc.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = DGV.Columns[c].HeaderText;
+                }
+
+                //table style 
+                oDoc.Application.Selection.Tables[1].Rows[1].Select();
+                oDoc.Application.Selection.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+
+
+
+                //save the file
+                oDoc.SaveAs2(filename);
+
+                //NASSIM LOUCHANI
+            }
+        }
+
+
+        private void Export_To_Excel(DataGridView dGV, string filename)
+        {
+            string stOutput = "";
+            // Export titles:
+            string sHeaders = "";
+
+            for (int j = 0; j < dGV.Columns.Count; j++)
+                sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+            stOutput += sHeaders + "\r\n";
+            // Export data.
+            for (int i = 0; i < dGV.RowCount - 1; i++)
+            {
+                string stLine = "";
+                for (int j = 0; j < dGV.Rows[i].Cells.Count; j++)
+                    stLine = stLine.ToString() + Convert.ToString(dGV.Rows[i].Cells[j].Value) + "\t";
+                stOutput += stLine + "\r\n";
+            }
+            Encoding utf16 = Encoding.GetEncoding(1254);
+            byte[] output = utf16.GetBytes(stOutput);
+            FileStream fs = new FileStream(filename, FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(output, 0, output.Length); //write the encoded file
+            bw.Flush();
+            bw.Close();
+
+
+        }
     }
+
 }
