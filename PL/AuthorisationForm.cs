@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Data;
+﻿using Data;
 using Data.Entities;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace PL
 {
@@ -19,8 +13,8 @@ namespace PL
         public AuthorisationForm()
         {
             InitializeComponent();
-            
-           //var ctx = new CoursesContext();
+
+            //var ctx = new CoursesContext();
             //dataGridView1.DataSource = ctx.Courses.ToList();
         }
 
@@ -58,7 +52,7 @@ namespace PL
         {
             string username = textBoxRegUsername.Text;
             string password = textBoxRegPW.Text;
-            
+
             string confirmation = textBoxRegPWConfirm.Text;
 
             if (username == String.Empty || password == String.Empty || confirmation == String.Empty)
