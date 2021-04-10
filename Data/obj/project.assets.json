@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\tgvyh\\Desktop\\College\\KPZ\\courses\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\Data.csproj",
+      "projectPath": "C:\\Users\\tgvyh\\Desktop\\College\\KPZ\\courses\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\tgvyh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tgvyh\\Desktop\\College\\КПЗ\\courses\\Data\\obj\\",
+      "outputPath": "C:\\Users\\tgvyh\\Desktop\\College\\KPZ\\courses\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

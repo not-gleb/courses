@@ -30,7 +30,6 @@ namespace PL
             {
                 if (ctx.Users.Any(x => x.Username.ToUpper() == textBoxUsername.Text.ToUpper() && x.Password == textBoxPassword.Text))
                 {
-                    MessageBox.Show("Logged in");
                     FormDB formDB = new FormDB();
                     this.Hide();
                     formDB.ShowDialog();
