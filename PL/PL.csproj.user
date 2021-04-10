@@ -4,6 +4,9 @@
     <Compile Update="AuthorisationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AuthorisationFormDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormDB.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,7 +1,7 @@
 ﻿
 namespace PL
 {
-    partial class Form1
+    partial class AuthorisationForm
     {
         /// <summary>
         ///  Required designer variable.

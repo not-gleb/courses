@@ -15,6 +15,7 @@ namespace PL
     public partial class AuthorisationForm : Form
     {
         private Panel currentPanel;
+
         public AuthorisationForm()
         {
             InitializeComponent();

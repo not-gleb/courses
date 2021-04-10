@@ -159,7 +159,6 @@ C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\bin\Debug\net5.0-windows\runtim
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\bin\Debug\net5.0-windows\Data.dll
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\bin\Debug\net5.0-windows\Data.pdb
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.csprojAssemblyReference.cache
-C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.Form1.resources
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.csproj.GenerateResource.cache
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tgvyh\Desktop\College\КПЗ\courses\PL\obj\Debug\net5.0-windows\PL.AssemblyInfoInputs.cache
