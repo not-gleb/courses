@@ -254,11 +254,11 @@ namespace PL
         public void Export_To_Excel(DataGridView dGV, string filename)
         {
             string stOutput = "";
-            // Export titles:
             string sHeaders = "";
 
             for (int j = 0; j < dGV.Columns.Count; j++)
                 sHeaders = sHeaders.ToString() + Convert.ToString(dGV.Columns[j].HeaderText) + "\t";
+
             stOutput += sHeaders + "\r\n";
             // Export data.
             for (int i = 0; i < dGV.RowCount - 1; i++)
@@ -363,6 +363,11 @@ namespace PL
             };
 
             smtpClient.Send(message);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

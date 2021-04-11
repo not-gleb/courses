@@ -58,13 +58,18 @@ namespace PL
             this.buttonDeleteCourse = new System.Windows.Forms.Button();
             this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
             this.otherPage = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.subjectTB = new System.Windows.Forms.TextBox();
-            this.msgTB = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.buttonSendFeedback = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.msgTB = new System.Windows.Forms.TextBox();
+            this.subjectTB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Organisations.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganisation)).BeginInit();
@@ -73,6 +78,7 @@ namespace PL
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
             this.otherPage.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +135,7 @@ namespace PL
             this.buttonExportWordOrg.TabIndex = 6;
             this.buttonExportWordOrg.Text = "Export to word document";
             this.buttonExportWordOrg.UseVisualStyleBackColor = true;
+            this.buttonExportWordOrg.Click += new System.EventHandler(this.buttonExportWordOrg_Click);
             // 
             // checkBoxOrderOrg
             // 
@@ -408,6 +415,7 @@ namespace PL
             // 
             // otherPage
             // 
+            this.otherPage.Controls.Add(this.panel2);
             this.otherPage.Controls.Add(this.panel1);
             this.otherPage.Location = new System.Drawing.Point(4, 28);
             this.otherPage.Name = "otherPage";
@@ -416,6 +424,59 @@ namespace PL
             this.otherPage.TabIndex = 3;
             this.otherPage.Text = "Other";
             this.otherPage.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(478, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(457, 497);
+            this.panel2.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(39, 187);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(283, 30);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Adress: Metrobudivska 5a";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(39, 137);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(246, 30);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Phone: 380506212211";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(39, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(310, 30);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Email: our_email@gmail.com";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(145, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(177, 51);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Contacts";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel1
             // 
@@ -431,49 +492,6 @@ namespace PL
             this.panel1.Size = new System.Drawing.Size(469, 497);
             this.panel1.TabIndex = 0;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.89565F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(100, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Send feedback";
-            // 
-            // subjectTB
-            // 
-            this.subjectTB.Location = new System.Drawing.Point(15, 108);
-            this.subjectTB.Name = "subjectTB";
-            this.subjectTB.Size = new System.Drawing.Size(320, 26);
-            this.subjectTB.TabIndex = 1;
-            // 
-            // msgTB
-            // 
-            this.msgTB.Location = new System.Drawing.Point(15, 187);
-            this.msgTB.Multiline = true;
-            this.msgTB.Name = "msgTB";
-            this.msgTB.Size = new System.Drawing.Size(320, 206);
-            this.msgTB.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 78);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Subject:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Message:";
-            // 
             // buttonSendFeedback
             // 
             this.buttonSendFeedback.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -484,6 +502,49 @@ namespace PL
             this.buttonSendFeedback.Text = "Send";
             this.buttonSendFeedback.UseVisualStyleBackColor = true;
             this.buttonSendFeedback.Click += new System.EventHandler(this.buttonSendFeedback_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Message:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Subject:";
+            // 
+            // msgTB
+            // 
+            this.msgTB.Location = new System.Drawing.Point(5, 187);
+            this.msgTB.Multiline = true;
+            this.msgTB.Name = "msgTB";
+            this.msgTB.Size = new System.Drawing.Size(320, 206);
+            this.msgTB.TabIndex = 2;
+            // 
+            // subjectTB
+            // 
+            this.subjectTB.Location = new System.Drawing.Point(15, 108);
+            this.subjectTB.Name = "subjectTB";
+            this.subjectTB.Size = new System.Drawing.Size(320, 26);
+            this.subjectTB.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(60, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(285, 51);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Send feedback";
             // 
             // FormDB
             // 
@@ -506,6 +567,8 @@ namespace PL
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
             this.otherPage.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -550,5 +613,10 @@ namespace PL
         private System.Windows.Forms.TextBox msgTB;
         private System.Windows.Forms.TextBox subjectTB;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
     }
 }
