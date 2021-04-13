@@ -30,7 +30,7 @@ namespace PL
                     this.Close();
                 }
                 else
-                    MessageBox.Show($"Wrong password {textBoxUsername.Text}");
+                    MessageBox.Show(this, $"Wrong username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -369,5 +369,13 @@ namespace PL
         {
 
         }
+
+        private void buttonOpenHelp_Click(object sender, EventArgs e)
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            string filePath = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\Help.chm";
+            MessageBox.Show(filePath);
+            System.Windows.Forms.Help.ShowHelp(this, filePath);
+        }
     }
 }

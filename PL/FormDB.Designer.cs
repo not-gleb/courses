@@ -70,6 +70,7 @@ namespace PL
             this.msgTB = new System.Windows.Forms.TextBox();
             this.subjectTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.buttonOpenHelp = new System.Windows.Forms.Button();
             this.Organisations.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganisation)).BeginInit();
@@ -427,6 +428,7 @@ namespace PL
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.buttonOpenHelp);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label7);
@@ -546,6 +548,16 @@ namespace PL
             this.label4.TabIndex = 0;
             this.label4.Text = "Send feedback";
             // 
+            // buttonOpenHelp
+            // 
+            this.buttonOpenHelp.Location = new System.Drawing.Point(135, 452);
+            this.buttonOpenHelp.Name = "buttonOpenHelp";
+            this.buttonOpenHelp.Size = new System.Drawing.Size(187, 28);
+            this.buttonOpenHelp.TabIndex = 12;
+            this.buttonOpenHelp.Text = "Допомога";
+            this.buttonOpenHelp.UseVisualStyleBackColor = true;
+            this.buttonOpenHelp.Click += new System.EventHandler(this.buttonOpenHelp_Click);
+            // 
             // FormDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -618,5 +630,6 @@ namespace PL
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonOpenHelp;
     }
 }
